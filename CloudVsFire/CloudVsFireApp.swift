@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct CloudVsFireApp: App {
+    
+    init() {
+        AppResolver.sharedServices.onboardingPageProviding = OnboardingPageProviding()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingPageView()
+                .environmentObject(OnboardingViewModel())
         }
     }
 }
