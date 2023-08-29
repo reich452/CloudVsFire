@@ -8,25 +8,44 @@
 import SwiftUI
 
 struct OnboardingPageView: View {
+    @Bindable var viewModel: OnboardingPageViewModel
+    
     var body: some View {
-        TabView {
-            OnboardingView()
-            OnboardingView()
-            OnboardingView()
-            OnboardingView()
-            
+        VStack {
+            TabView(selection: $viewModel.currentPage) {
+                ForEach(viewModel.onboardingPages.indices, id: \.self) { index in
+                    OnboardingView(onboarding: viewModel.onboardingPages[index])
+                        .tag(index)
+                }
+            }
+            .tabViewStyle(.page)
+            .animation(.bouncy, value: 100)
+            Button("Next") {
+                withAnimation {
+                    viewModel.nextPage()
+                }
+            }
+            .disabled(viewModel.isLastPage)
+            .padding()
         }
-        .environmentObject(OnboardingViewModel())
-        .tabViewStyle(.page)
-        .animation(.bouncy, value: 100)
-        
     }
     
     init() {
+        self.init(viewModel: OnboardingPageViewModel())
+        setupAppearance()
+    }
+    
+    fileprivate init(viewModel: OnboardingPageViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    private func setupAppearance() {
         UIPageControl.appearance().currentPageIndicatorTintColor = .magenta
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.magenta.withAlphaComponent(0.2)
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     OnboardingPageView()

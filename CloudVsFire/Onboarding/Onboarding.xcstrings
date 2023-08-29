@@ -1,0 +1,24 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CloudKit" : {
+      "comment" : "Title"
+    },
+    "Firebase" : {
+      "comment" : "Title"
+    },
+    "See the posts from CloudKit along with the fetching time. Upload your own post to see how long it takes. Or view the discussion boarrd to see what people are saying about CloudKit. Add your own thoughts." : {
+      "comment" : "CloudKit usage description"
+    },
+    "This app guids you through 2 different backends. If you're here to see the performance diffrence between CloudKit & Firebase. You're in the right spot! This app also has a bonus swiping feature to see the top new movies." : {
+      "comment" : "The apps description"
+    },
+    "Want to see the same app but with Firebase? This app has the same UX but with Firebase. An app within an app. Choose your backend!" : {
+      "comment" : "CloudKit usage description."
+    },
+    "Welcome to Cloud.vs.Fire" : {
+      "comment" : "Title"
+    }
+  },
+  "version" : "1.0"
+}
