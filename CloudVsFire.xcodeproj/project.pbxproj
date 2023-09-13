@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8470B7C2A9D94A700ED72A2 /* Onboarding.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C8470B7B2A9D94A700ED72A2 /* Onboarding.xcstrings */; };
+		C84E04DE2AB1679D005B46BD /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */; };
+		C8608A482A7E7D3600F1A5F9 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */; };
+		C8806B6A2A8D27ED00D8B29C /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */; };
+		C8806B6C2A8D350E00D8B29C /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6B2A8D350E00D8B29C /* Space.swift */; };
+		C8806B702A8D410400D8B29C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6F2A8D410400D8B29C /* Onboarding.swift */; };
+		C8806B732A8D417400D8B29C /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B722A8D417400D8B29C /* ImageAsset.swift */; };
+		C8806B782A8D432700D8B29C /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B772A8D432700D8B29C /* AssetImage.swift */; };
+		C8806B7C2A8D47C500D8B29C /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B7B2A8D47C500D8B29C /* ImageStyle.swift */; };
+		C8806B7F2A8D481800D8B29C /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B7E2A8D481800D8B29C /* Image+.swift */; };
+		C8806B812A8D510100D8B29C /* PrimaryImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B802A8D510100D8B29C /* PrimaryImageStyle.swift */; };
+		C8806B832A8D5F6400D8B29C /* OnboardingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B822A8D5F6400D8B29C /* OnboardingPageViewModel.swift */; };
 		C8F7C4302A7E650000F5182B /* CloudVsFireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C42F2A7E650000F5182B /* CloudVsFireApp.swift */; };
-		C8F7C4322A7E650000F5182B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C4312A7E650000F5182B /* ContentView.swift */; };
+		C8F7C4322A7E650000F5182B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C4312A7E650000F5182B /* OnboardingView.swift */; };
 		C8F7C4342A7E650200F5182B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F7C4332A7E650200F5182B /* Assets.xcassets */; };
 		C8F7C4372A7E650200F5182B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F7C4362A7E650200F5182B /* Preview Assets.xcassets */; };
-		C8F7C4412A7E650200F5182B /* CloudVsFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C4402A7E650200F5182B /* CloudVsFireTests.swift */; };
 		C8F7C44B2A7E650200F5182B /* CloudVsFireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C44A2A7E650200F5182B /* CloudVsFireUITests.swift */; };
 		C8F7C44D2A7E650200F5182B /* CloudVsFireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C44C2A7E650200F5182B /* CloudVsFireUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -34,13 +45,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C8470B7B2A9D94A700ED72A2 /* Onboarding.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Onboarding.xcstrings; sourceTree = "<group>"; };
+		C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
+		C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		C8806B6B2A8D350E00D8B29C /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		C8806B6F2A8D410400D8B29C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		C8806B722A8D417400D8B29C /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		C8806B772A8D432700D8B29C /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
+		C8806B7B2A8D47C500D8B29C /* ImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
+		C8806B7E2A8D481800D8B29C /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
+		C8806B802A8D510100D8B29C /* PrimaryImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryImageStyle.swift; sourceTree = "<group>"; };
+		C8806B822A8D5F6400D8B29C /* OnboardingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewModel.swift; sourceTree = "<group>"; };
 		C8F7C42C2A7E650000F5182B /* CloudVsFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudVsFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F7C42F2A7E650000F5182B /* CloudVsFireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireApp.swift; sourceTree = "<group>"; };
-		C8F7C4312A7E650000F5182B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C8F7C4312A7E650000F5182B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C8F7C4332A7E650200F5182B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8F7C4362A7E650200F5182B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8F7C43C2A7E650200F5182B /* CloudVsFireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudVsFireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8F7C4402A7E650200F5182B /* CloudVsFireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireTests.swift; sourceTree = "<group>"; };
 		C8F7C4462A7E650200F5182B /* CloudVsFireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudVsFireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F7C44A2A7E650200F5182B /* CloudVsFireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireUITests.swift; sourceTree = "<group>"; };
 		C8F7C44C2A7E650200F5182B /* CloudVsFireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -71,6 +93,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8608A462A7E7D0800F1A5F9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C8470B7B2A9D94A700ED72A2 /* Onboarding.xcstrings */,
+				C8806B712A8D410800D8B29C /* Model */,
+				C8806B6E2A8D3F9900D8B29C /* ViewModel */,
+				C8806B6D2A8D3F7100D8B29C /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C8806B682A8D27AF00D8B29C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C8806B7A2A8D479A00D8B29C /* Base */,
+				C8806B792A8D46C300D8B29C /* Builder */,
+				C8806B7D2A8D47F900D8B29C /* Extensions */,
+				C8806B772A8D432700D8B29C /* AssetImage.swift */,
+				C8806B6B2A8D350E00D8B29C /* Space.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C8806B6D2A8D3F7100D8B29C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8F7C4312A7E650000F5182B /* OnboardingView.swift */,
+				C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8806B6E2A8D3F9900D8B29C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C8806B822A8D5F6400D8B29C /* OnboardingPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C8806B712A8D410800D8B29C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8806B6F2A8D410400D8B29C /* Onboarding.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8806B792A8D46C300D8B29C /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				C8806B7B2A8D47C500D8B29C /* ImageStyle.swift */,
+				C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */,
+				C8806B802A8D510100D8B29C /* PrimaryImageStyle.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		C8806B7A2A8D479A00D8B29C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C8806B722A8D417400D8B29C /* ImageAsset.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C8806B7D2A8D47F900D8B29C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8806B7E2A8D481800D8B29C /* Image+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C8F7C4232A7E650000F5182B = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				C8F7C42F2A7E650000F5182B /* CloudVsFireApp.swift */,
-				C8F7C4312A7E650000F5182B /* ContentView.swift */,
+				C8608A462A7E7D0800F1A5F9 /* Onboarding */,
+				C8806B682A8D27AF00D8B29C /* UI */,
 				C8F7C4332A7E650200F5182B /* Assets.xcassets */,
 				C8F7C4352A7E650200F5182B /* Preview Content */,
 			);
@@ -113,7 +210,7 @@
 		C8F7C43F2A7E650200F5182B /* CloudVsFireTests */ = {
 			isa = PBXGroup;
 			children = (
-				C8F7C4402A7E650200F5182B /* CloudVsFireTests.swift */,
+				C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */,
 			);
 			path = CloudVsFireTests;
 			sourceTree = "<group>";
@@ -233,6 +330,7 @@
 			files = (
 				C8F7C4372A7E650200F5182B /* Preview Assets.xcassets in Resources */,
 				C8F7C4342A7E650200F5182B /* Assets.xcassets in Resources */,
+				C8470B7C2A9D94A700ED72A2 /* Onboarding.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +355,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8F7C4322A7E650000F5182B /* ContentView.swift in Sources */,
+				C8806B812A8D510100D8B29C /* PrimaryImageStyle.swift in Sources */,
+				C8806B7C2A8D47C500D8B29C /* ImageStyle.swift in Sources */,
+				C8806B732A8D417400D8B29C /* ImageAsset.swift in Sources */,
+				C8806B702A8D410400D8B29C /* Onboarding.swift in Sources */,
+				C8806B6C2A8D350E00D8B29C /* Space.swift in Sources */,
+				C8806B6A2A8D27ED00D8B29C /* PrimaryButtonStyle.swift in Sources */,
+				C8806B782A8D432700D8B29C /* AssetImage.swift in Sources */,
+				C8806B832A8D5F6400D8B29C /* OnboardingPageViewModel.swift in Sources */,
+				C8608A482A7E7D3600F1A5F9 /* OnboardingPageView.swift in Sources */,
+				C8806B7F2A8D481800D8B29C /* Image+.swift in Sources */,
+				C8F7C4322A7E650000F5182B /* OnboardingView.swift in Sources */,
 				C8F7C4302A7E650000F5182B /* CloudVsFireApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8F7C4412A7E650200F5182B /* CloudVsFireTests.swift in Sources */,
+				C84E04DE2AB1679D005B46BD /* OnboardingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +545,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift-Manager-iOS-sample.CloudVsFire";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +577,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift-Manager-iOS-sample.CloudVsFire";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

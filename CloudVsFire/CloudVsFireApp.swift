@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CloudVsFireApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          OnboardingPageView()
+                
         }
     }
 }
