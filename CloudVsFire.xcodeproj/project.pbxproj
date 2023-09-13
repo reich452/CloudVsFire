@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C8470B7C2A9D94A700ED72A2 /* Onboarding.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C8470B7B2A9D94A700ED72A2 /* Onboarding.xcstrings */; };
+		C84E04DE2AB1679D005B46BD /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */; };
 		C8608A482A7E7D3600F1A5F9 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */; };
 		C8806B6A2A8D27ED00D8B29C /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */; };
 		C8806B6C2A8D350E00D8B29C /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6B2A8D350E00D8B29C /* Space.swift */; };
@@ -22,7 +23,6 @@
 		C8F7C4322A7E650000F5182B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C4312A7E650000F5182B /* OnboardingView.swift */; };
 		C8F7C4342A7E650200F5182B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F7C4332A7E650200F5182B /* Assets.xcassets */; };
 		C8F7C4372A7E650200F5182B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F7C4362A7E650200F5182B /* Preview Assets.xcassets */; };
-		C8F7C4412A7E650200F5182B /* CloudVsFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C4402A7E650200F5182B /* CloudVsFireTests.swift */; };
 		C8F7C44B2A7E650200F5182B /* CloudVsFireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C44A2A7E650200F5182B /* CloudVsFireUITests.swift */; };
 		C8F7C44D2A7E650200F5182B /* CloudVsFireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7C44C2A7E650200F5182B /* CloudVsFireUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		C8470B7B2A9D94A700ED72A2 /* Onboarding.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Onboarding.xcstrings; sourceTree = "<group>"; };
+		C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
 		C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		C8806B6B2A8D350E00D8B29C /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		C8F7C4332A7E650200F5182B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8F7C4362A7E650200F5182B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8F7C43C2A7E650200F5182B /* CloudVsFireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudVsFireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8F7C4402A7E650200F5182B /* CloudVsFireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireTests.swift; sourceTree = "<group>"; };
 		C8F7C4462A7E650200F5182B /* CloudVsFireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudVsFireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F7C44A2A7E650200F5182B /* CloudVsFireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireUITests.swift; sourceTree = "<group>"; };
 		C8F7C44C2A7E650200F5182B /* CloudVsFireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVsFireUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		C8F7C43F2A7E650200F5182B /* CloudVsFireTests */ = {
 			isa = PBXGroup;
 			children = (
-				C8F7C4402A7E650200F5182B /* CloudVsFireTests.swift */,
+				C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */,
 			);
 			path = CloudVsFireTests;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8F7C4412A7E650200F5182B /* CloudVsFireTests.swift in Sources */,
+				C84E04DE2AB1679D005B46BD /* OnboardingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

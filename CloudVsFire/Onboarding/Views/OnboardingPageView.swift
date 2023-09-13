@@ -13,8 +13,8 @@ struct OnboardingPageView: View {
     var body: some View {
         VStack {
             TabView(selection: $viewModel.currentPage) {
-                ForEach(viewModel.onboardingPages.indices, id: \.self) { index in
-                    OnboardingView(onboarding: viewModel.onboardingPages[index])
+                ForEach(viewModel.allOnboardingPages.indices, id: \.self) { index in
+                    OnboardingView(onboarding: viewModel.allOnboardingPages[index])
                         .tag(index)
                 }
             }

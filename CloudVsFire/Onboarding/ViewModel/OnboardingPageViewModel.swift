@@ -12,14 +12,8 @@ import SwiftUI
     
     // MARK: - Properties
     
-    var onboardingPages: [Onboarding]
-    var currentPage: Int = 0 
-    
-    // MARK: - init
-    
-    init(onboarding pages: [Onboarding] = [.pageOne, .pageTwo, .pageThree]) {
-        self.onboardingPages = pages
-    }
+    private let onboardingPages: [Onboarding] = [.pageOne, .pageTwo, .pageThree]
+    var currentPage: Int = 0
     
     // MARK: - Computed
     
@@ -31,10 +25,12 @@ import SwiftUI
     }
     
     var isLastPage: Bool {
-        return currentPage >= onboardingPages.count - 1
+        currentPage == onboardingPages.count - 1
     }
     
-    // MARK: - Main
+    var allOnboardingPages: [Onboarding] {
+        return onboardingPages
+    }
     
     func nextPage() {
         if !isLastPage {
