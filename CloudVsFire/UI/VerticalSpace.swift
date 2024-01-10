@@ -1,5 +1,5 @@
 //
-//  Space.swift
+//  VerticalSpace.swift
 //  CloudVsFire
 //
 //  Created by Nick Reichard on 8/16/23.

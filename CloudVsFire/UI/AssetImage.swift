@@ -15,4 +15,3 @@ struct AssetImage: View {
         Image(asset.rawValue)
     }
 }
-

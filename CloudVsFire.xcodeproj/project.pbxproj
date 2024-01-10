@@ -11,7 +11,7 @@
 		C84E04DE2AB1679D005B46BD /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */; };
 		C8608A482A7E7D3600F1A5F9 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */; };
 		C8806B6A2A8D27ED00D8B29C /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */; };
-		C8806B6C2A8D350E00D8B29C /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6B2A8D350E00D8B29C /* Space.swift */; };
+		C8806B6C2A8D350E00D8B29C /* VerticalSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6B2A8D350E00D8B29C /* VerticalSpace.swift */; };
 		C8806B702A8D410400D8B29C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6F2A8D410400D8B29C /* Onboarding.swift */; };
 		C8806B732A8D417400D8B29C /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B722A8D417400D8B29C /* ImageAsset.swift */; };
 		C8806B782A8D432700D8B29C /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B772A8D432700D8B29C /* AssetImage.swift */; };
@@ -49,7 +49,7 @@
 		C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
 		C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
-		C8806B6B2A8D350E00D8B29C /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		C8806B6B2A8D350E00D8B29C /* VerticalSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSpace.swift; sourceTree = "<group>"; };
 		C8806B6F2A8D410400D8B29C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		C8806B722A8D417400D8B29C /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		C8806B772A8D432700D8B29C /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				C8806B792A8D46C300D8B29C /* Builder */,
 				C8806B7D2A8D47F900D8B29C /* Extensions */,
 				C8806B772A8D432700D8B29C /* AssetImage.swift */,
-				C8806B6B2A8D350E00D8B29C /* Space.swift */,
+				C8806B6B2A8D350E00D8B29C /* VerticalSpace.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -231,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8F7C4502A7E650200F5182B /* Build configuration list for PBXNativeTarget "CloudVsFire" */;
 			buildPhases = (
+				C84F27CE2B4ED2F300DA44ED /* Run SwiftLint */,
 				C8F7C4282A7E650000F5182B /* Sources */,
 				C8F7C4292A7E650000F5182B /* Frameworks */,
 				C8F7C42A2A7E650000F5182B /* Resources */,
@@ -350,6 +351,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C84F27CE2B4ED2F300DA44ED /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n   swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8F7C4282A7E650000F5182B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -359,7 +382,7 @@
 				C8806B7C2A8D47C500D8B29C /* ImageStyle.swift in Sources */,
 				C8806B732A8D417400D8B29C /* ImageAsset.swift in Sources */,
 				C8806B702A8D410400D8B29C /* Onboarding.swift in Sources */,
-				C8806B6C2A8D350E00D8B29C /* Space.swift in Sources */,
+				C8806B6C2A8D350E00D8B29C /* VerticalSpace.swift in Sources */,
 				C8806B6A2A8D27ED00D8B29C /* PrimaryButtonStyle.swift in Sources */,
 				C8806B782A8D432700D8B29C /* AssetImage.swift in Sources */,
 				C8806B832A8D5F6400D8B29C /* OnboardingPageViewModel.swift in Sources */,
@@ -532,6 +555,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CloudVsFire/Preview Content\"";
 				DEVELOPMENT_TEAM = MU4CK45G4T;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -564,6 +588,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CloudVsFire/Preview Content\"";
 				DEVELOPMENT_TEAM = MU4CK45G4T;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

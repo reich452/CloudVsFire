@@ -13,7 +13,7 @@ import SwiftUI
 protocol ImageStyle {
     
     /// The type of view representing the body of this style.
-    associatedtype Body : View
+    associatedtype Body: View
     
     /// Creates a view that represents the body of an `Image` view, styled with this style.
     ///

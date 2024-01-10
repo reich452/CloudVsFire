@@ -8,7 +8,8 @@
 import Combine
 import SwiftUI
 
-@Observable class OnboardingPageViewModel {
+@Observable 
+class OnboardingPageViewModel {
     
     // MARK: - Properties
     
@@ -29,7 +30,7 @@ import SwiftUI
     }
     
     var allOnboardingPages: [Onboarding] {
-        return onboardingPages
+        onboardingPages
     }
     
     func nextPage() {

@@ -12,8 +12,6 @@ import SwiftUI
 /// It helps in avoiding string-based API and reduces mistakes while accessing images.
 enum ImageAsset: String {
     case onboardingIcon1
-   
-   
     
     #if os(macOS)
     internal typealias Image = NSImage
@@ -37,10 +35,9 @@ enum ImageAsset: String {
         }
         return result
     }
-
     
     var traitCollection: UITraitCollection? {
-        return nil
+        nil
     }
 }
 
