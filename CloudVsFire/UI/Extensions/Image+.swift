@@ -26,4 +26,3 @@ extension Image {
         style.makeBody(configuration: ImageStyleConfiguration(image: self))
     }
 }
-

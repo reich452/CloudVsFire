@@ -9,11 +9,6 @@ import SwiftUI
 
 struct PrimaryImageStyle: ImageStyle {
     
-    init() {
-       // No opt. 
-    }
-    
-    
     func makeBody(configuration: ImageStyleConfiguration) -> some View {
         configuration.image
             .renderingMode(.original)
