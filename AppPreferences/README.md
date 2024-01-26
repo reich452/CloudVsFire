@@ -18,13 +18,15 @@ To use these property wrappers, simply include the source files in your Swift pr
 
 #### Example
 
-```
+```swift
 @DefaultPreference(key: .username, storedValue: "DefaultUser")
-var username: String```
-
-Or set up an enum that can be used throughout the app. 
-This works great when you need to persist small amounts of data that come from another service. 
+var username: String
 ```
+
+Or set up an enum that can be used throughout the app.
+This works great when you need to persist small amounts of data that come from another service.
+
+```swift
 public enum PreferenceKeys: String, StorageKey {
     case hasReachedMaxApiAttempts
 }
@@ -35,10 +37,11 @@ public enum OnboardingState {
 }
 ```
 
-#### Example 2: SwiftUI Read Only 
+#### Example 2: SwiftUI Read Only
+
 `DefaultPreference` is primarily used for preferences with a default value. This is great for Read Only However, it is possible to capture its state for read-only purposes in SwiftUI views (See Example 3):
 
-```
+```swift
 struct ContentView2: View {
     
    private var completed: Bool { OnboardingState.hasOnboardedCompleted }
@@ -72,11 +75,12 @@ struct MainAppView: View {
     }
 }
 ```
+
 #### Example 3: State & Binding
 
 Using `DefaultPreference` with `@State` is not recommended because it doesn't leverage the full reactive binding pipeline. This example is included to demonstrate the limitations of `DefaultPreference` when it comes to SwiftUI writable binding and to showcase the ease of use of the `@BindablePreference` property wrapper for a more direct solution when working with SwiftUI views:
 
-```
+```swift
 struct ContentView3: View {
     
     @State private var isCompleted: Bool
@@ -101,23 +105,23 @@ struct ContentView3: View {
 }
 ```
 
-### Documentation Key Takeaways
+### DefaultPreference Documentation Key Takeaways
 
 - Initializes with a key and a default value.
 - Automatically returns the stored value if no value is found in UserDefaults.
-- Uses The `register(defaults:)` method is used to set up the initial values of certain user preferences (defaults). 
-See `UserDefaultsProvider` for further details on default values. 
-
+- Uses The `register(defaults:)` method is used to set up the initial values of certain user preferences (defaults).
+See `UserDefaultsProvider` for further details on default values.
 
 ## OptionalStandardPref
+
 - `OptionalStandardPref` is ideal for handling optional user preferences, especially when a preference value may or may not be present.
 - Use OptionalStandardPref when you need to represent preferences that may or may not have a value set in UserDefaults.
 - It's a suitable choice for scenarios where the presence or absence of a preference value is significant to your application's logic.
 - This property wrapper allows you to work with optional values in a user-friendly manner.
 
-#### Example 1: Basic use case
+### Example 1: Basic Use Uase
 
-```
+```swift
 @OptionalStandardPref(key: .lastOpenedDate)
 var lastOpenedDate: Date?
 ```
@@ -126,14 +130,16 @@ var lastOpenedDate: Date?
 
 Let's consider a practical example where you're building a user profile feature, and you want to allow users to set their profile picture. However, not all users may have set a profile picture yet. Here's how you can utilize @OptionalStandardPref to manage this optional preference:
 
-```
+```swift
 struct UserProfile {
     @OptionalStandardPref(key: .profilePicture)
     var profilePicture: Data?
     
     // Other user profile properties and methods...
 }
+```
 
+```swift
 // Usage
 var userProfile = UserProfile()
 
@@ -149,6 +155,7 @@ if let profilePictureData = userProfile.profilePicture {
     // User has not set a profile picture yet, show a placeholder or default image
 }
 ```
+
 In this example, UserProfile effectively manages the user's profile picture using @OptionalStandardPref. Users can set their profile picture, and the property wrapper makes it easy to determine if a profile picture is set or not, allowing you to customize your application's behavior accordingly.
 
 ### Documentation Key Takeaways
@@ -157,14 +164,15 @@ In this example, UserProfile effectively manages the user's profile picture usin
 - Returns nil if no value is found in UserDefaults.
 
 ## BindablePreference
+
 - `BindablePreference` harnesses SwiftUI's Binding mechanism to facilitate two-way data flow between views and preference storage.
 - This property wrapper enables SwiftUI views to seamlessly bind to user preference values, automatically updating the view when these values change.
 - It is designed exclusively for use with SwiftUI views.
 - BindablePreference seamlessly integrates with SwiftUI, providing a bindable property that reflects user preferences and reacts to changes.
 
-#### Example
+### Example 1
 
-```
+```swift
 struct ContentView2: View {
     
     @BindablePreference(\.hasOnboarded) var hasOnboarded
@@ -191,12 +199,13 @@ struct ContentView2: View {
 }
 ```
 
-### Documentation Key Takeaways
+#### Documentation Key Takeaways
 
 - Designed for SwiftUI.
 - Provides a Binding to a user preference, allowing it to be used directly in SwiftUI views.
 
-## Testing
+### Testing
+
 The `UserDefaultsProvider` is used to make it easier to ensure the expected functionality via Unit Tests.
 
 ### Unit Test Basics
