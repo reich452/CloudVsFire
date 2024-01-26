@@ -9,7 +9,6 @@ import Foundation
 import SFSafeSymbols
 import SwiftUI
 
-
 /// The `RootTab` enum represents the different tabs in your application.
 ///
 ///  Each case of this enum corresponds to a specific tab, providing an easy way to identify and navigate between different sections or features of the app.
