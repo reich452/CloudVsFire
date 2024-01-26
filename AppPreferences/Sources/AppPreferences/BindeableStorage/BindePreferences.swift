@@ -1,7 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 //
-//  AppPreferences.swift
+//  BindePreferences.swift
 //  CloudVsFire
 //
 //  Created by Nick Reichard on 1/25/24.
@@ -12,23 +12,25 @@ import Foundation
 
 /// Class for managing application preferences.
 ///
-/// `AppPreferences` provides a centralized point for managing user settings and preferences
+/// `BindePreferences` provides a centralized point for managing user settings and preferences
 /// within the application. It uses a `UserDefaultsProvider` to persist these preferences,
 /// allowing for easy retrieval and modification. This class can be extended to include
 /// additional preference properties as needed.
-public class AppPreferences {
+public class BindePreferences {
+
+    // MARK: Properties
 
     /// The shared instance of `AppPreferences`.
-    public static let standard = AppPreferences()
+    public static let standard = BindePreferences()
 
     /// The underlying provider used for storing and retrieving user defaults.
     private let userDefaultsProvider: UserDefaultsProvider
     /// Sends through the changed key path whenever a change occurs.
-    var preferencesChangedSubject = PassthroughSubject<AnyKeyPath, Never>()
+    public var preferencesChangedSubject = PassthroughSubject<AnyKeyPath, Never>()
 
     // MARK: Init
 
-    /// Initializes a new instance of `AppPreferences`.
+    /// Initializes a new instance of `BindePreferences`.
     ///
     /// - Parameter userDefaultsProvider: The provider used for storing and retrieving user defaults.
     ///
@@ -41,7 +43,7 @@ public class AppPreferences {
     @UserDefault(PreferenceKey.hasOnboarded)
     public var hasOnboarded: Bool = false
 
-    // MARK: Helper
+    // MARK: - Helper
 
     func value<T>(forKey key: String) -> T? {
         userDefaultsProvider.object(forKey: key) as? T

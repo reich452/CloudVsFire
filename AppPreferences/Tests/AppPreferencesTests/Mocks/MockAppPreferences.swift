@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 
-final class MockAppPreferences: AppPreferences {
+final class MockAppPreferences: BindePreferences {
 
     var testStore = [String: Any]()
 

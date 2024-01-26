@@ -1,7 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 //
-//  Preference.swift
+//  BindablePreference.swift
 //  CloudVsFire
 //
 //  Created by Nick Reichard on 1/25/24.
@@ -10,36 +10,39 @@
 import Combine
 import SwiftUI
 
-/// A property wrapper that provides a SwiftUI dynamic property for accessing and modifying
-/// values stored in `AppPreferences`.
+/// A SwiftUI property wrapper that provides a SwiftUI dynamic property for accessing and modifying
+/// values stored in `BindePreferences`.
 ///
 /// This property wrapper allows SwiftUI views to bind to user preference values, automatically
 /// updating the view when these values change. The `Preference` wrapper should be used
 /// within SwiftUI views that require interaction with user preferences.
 ///
-/// - Note: The `Preference` wrapper leverages SwiftUI's `Binding` to enable two-way data flow
-///         between the view and the preferences storage.
+/// - Note: The `BindablePreference` wrapper leverages SwiftUI's `Binding` to enable two-way data flow
+///         between the view and the preferences storage. Only use this with SwiftUI views.
 @propertyWrapper
-public struct Preference<Value>: DynamicProperty {
+public struct BindablePreference<Value>: DynamicProperty {
 
-    // MARK: - Private Properties - Should remain private
+    // MARK: Private Properties - Should remain private
 
     /// An observer for changes in preferences, ensuring the SwiftUI view updates when preferences change./
     @ObservedObject private var preferencesObserver: PublisherObservableObject
     /// The key path to the specific value in `AppPreferences`.
-    private let keyPath: ReferenceWritableKeyPath<AppPreferences, Value>
+    private let keyPath: ReferenceWritableKeyPath<BindePreferences, Value>
     /// The instance of `AppPreferences` used for accessing and modifying the preference value.
-    private let appPreferences: AppPreferences
+    private let appPreferences: BindePreferences
+
+    // MARK: init
 
     /// Initializes a new preference property wrapper.
     ///
     /// - Parameters:
-    ///   - keyPath: A key path to the specific preference value in `AppPreferences`.
-    ///   - preferences: An instance of `AppPreferences`. Defaults to `.standard` if not specified.
-    public init(_ keyPath: ReferenceWritableKeyPath<AppPreferences, Value>, preferences: AppPreferences = .standard) {
+    ///   - keyPath: A key path to the specific preference value in `BindePreferences`.
+    ///   - preferences: An instance of `BindePreferences`. Defaults to `.standard` if not specified.
+    public init(_ keyPath: ReferenceWritableKeyPath<BindePreferences, Value>,
+                bindePreferences: BindePreferences = .standard) {
         self.keyPath = keyPath
-        self.appPreferences = preferences
-        let publisher = preferences
+        self.appPreferences = bindePreferences
+        let publisher = bindePreferences
             .preferencesChangedSubject
             .filter { changedKeyPath in
                 changedKeyPath == keyPath
@@ -47,6 +50,8 @@ public struct Preference<Value>: DynamicProperty {
             .eraseToAnyPublisher()
         self.preferencesObserver = .init(publisher: publisher)
     }
+
+    // MARK: - Main
 
     /// The current value of the preference.
     ///

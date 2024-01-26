@@ -11,14 +11,14 @@ import XCTest
 
 final class PreferencesTests: XCTestCase {
 
-    private var appPreferences: AppPreferences!
+    private var appPreferences: BindePreferences!
     private var mockUserDefaults: MockUserDefaults!
     private var cancellables: Set<AnyCancellable>!
 
     override func setUp() {
         super.setUp()
         mockUserDefaults = MockUserDefaults()
-        appPreferences = AppPreferences(userDefaultsProvider: mockUserDefaults)
+        appPreferences = BindePreferences(userDefaultsProvider: mockUserDefaults)
         cancellables = []
     }
 
