@@ -31,16 +31,16 @@ final class PreferencesTests: XCTestCase {
 
     // MARK: - Tests
 
-    func testHasOnboardedPreference() {
+    func testHhasCompletedOnboarding() {
         // Act & Assert
-        XCTAssertFalse(appPreferences.hasOnboarded, "Default value for hasOnboarded should be false")
+        XCTAssertFalse(appPreferences.hasCompletedOnboarding, "Default value for hasCompletedOnboarding should be false")
 
         // Act
-        appPreferences.hasOnboarded = true
+        appPreferences.hasCompletedOnboarding = true
 
         // Assert
-        XCTAssertTrue(appPreferences.hasOnboarded, "hasOnboarded should be true after setting")
-        XCTAssertEqual(mockUserDefaults.store["hasOnboarded"] as? Bool, true)
+        XCTAssertTrue(appPreferences.hasCompletedOnboarding, "hasCompletedOnboarding should be true after setting")
+        XCTAssertEqual(mockUserDefaults.store["hasCompletedOnboarding"] as? Bool, true)
     }
 
     func testPreferencesChangedSubject() {
@@ -53,7 +53,7 @@ final class PreferencesTests: XCTestCase {
             .store(in: &cancellables)
 
         // Act
-        appPreferences.hasOnboarded = true
+        appPreferences.hasCompletedOnboarding = true
 
         // Assert
         wait(for: [expectation], timeout: 1.0)
