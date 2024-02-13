@@ -5,37 +5,36 @@
 //  Created by Nick Reichard on 8/16/23.
 //
 
-import Combine
 import SwiftUI
 
-@Observable 
+@Observable
 class OnboardingPageViewModel {
     
     // MARK: - Properties
     
-    private let onboardingPages: [Onboarding] = [.pageOne, .pageTwo, .pageThree]
-    var currentPage: Int = 0
+    let onboardingPages = Onboarding.allCases
+    var currentPageIndex: Int = 0
     
-    // MARK: - Computed
-    
-    var currentOnboardingPage: Onboarding? {
-        guard currentPage >= 0 && currentPage < onboardingPages.count else {
-            return nil
-        }
-        return onboardingPages[currentPage]
+    // MARK: - Computed Properties
+
+    private var isLastPage: Bool {
+        currentPageIndex == onboardingPages.count - 1
     }
     
-    var isLastPage: Bool {
-        currentPage == onboardingPages.count - 1
+    var currentOnboardingPage: Onboarding {
+        onboardingPages[currentPageIndex]
     }
     
-    var allOnboardingPages: [Onboarding] {
-        onboardingPages
-    }
+    /// Closure to be called when onboarding is completed
+    var didCompleteOnboarding: (() -> Void)?
+    
+    // MARK: - Methods
     
     func nextPage() {
-        if !isLastPage {
-            currentPage += 1
+        if isLastPage {
+            didCompleteOnboarding?()
+        } else {
+            currentPageIndex += 1
         }
     }
 }

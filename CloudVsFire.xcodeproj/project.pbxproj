@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		C871D3AE2B60052800F99922 /* CloudKitNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C871D3AD2B60052800F99922 /* CloudKitNavigationStack.swift */; };
 		C871D3B12B60059E00F99922 /* FirebaseNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C871D3B02B60059E00F99922 /* FirebaseNavigationStack.swift */; };
 		C871D3B42B60060E00F99922 /* SettingsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C871D3B32B60060E00F99922 /* SettingsNavigationStack.swift */; };
+		C871D3D32B63995E00F99922 /* AppPreferences in Frameworks */ = {isa = PBXBuildFile; productRef = C871D3D22B63995E00F99922 /* AppPreferences */; };
+		C871D3D42B63995E00F99922 /* AppPreferences in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C871D3D22B63995E00F99922 /* AppPreferences */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C871D3DA2B63FAFD00F99922 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C871D3D92B63FAFD00F99922 /* AppTabView.swift */; };
+		C871D3DF2B69631600F99922 /* OnboardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C871D3DE2B69631600F99922 /* OnboardingHeaderView.swift */; };
 		C8806B6A2A8D27ED00D8B29C /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */; };
 		C8806B6C2A8D350E00D8B29C /* VerticalSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6B2A8D350E00D8B29C /* VerticalSpace.swift */; };
 		C8806B702A8D410400D8B29C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8806B6F2A8D410400D8B29C /* Onboarding.swift */; };
@@ -50,6 +54,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C871D3D52B63995E00F99922 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C871D3D42B63995E00F99922 /* AppPreferences in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C8470B7B2A9D94A700ED72A2 /* Onboarding.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Onboarding.xcstrings; sourceTree = "<group>"; };
 		C84E04DD2AB1679D005B46BD /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
@@ -59,6 +77,9 @@
 		C871D3AD2B60052800F99922 /* CloudKitNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitNavigationStack.swift; sourceTree = "<group>"; };
 		C871D3B02B60059E00F99922 /* FirebaseNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNavigationStack.swift; sourceTree = "<group>"; };
 		C871D3B32B60060E00F99922 /* SettingsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationStack.swift; sourceTree = "<group>"; };
+		C871D3D02B63967300F99922 /* AppPreferences */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppPreferences; sourceTree = "<group>"; };
+		C871D3D92B63FAFD00F99922 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		C871D3DE2B69631600F99922 /* OnboardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHeaderView.swift; sourceTree = "<group>"; };
 		C8806B692A8D27ED00D8B29C /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		C8806B6B2A8D350E00D8B29C /* VerticalSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSpace.swift; sourceTree = "<group>"; };
 		C8806B6F2A8D410400D8B29C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -85,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C871D3A82B5FF01B00F99922 /* SFSafeSymbols in Frameworks */,
+				C871D3D32B63995E00F99922 /* AppPreferences in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +141,7 @@
 		C871D3A32B5FEDA100F99922 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				C871D3D92B63FAFD00F99922 /* AppTabView.swift */,
 				C871D3A42B5FEE0100F99922 /* RootTab.swift */,
 			);
 			path = Navigation;
@@ -167,6 +190,13 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
+		C871D3D12B63995E00F99922 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C8806B682A8D27AF00D8B29C /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				C8F7C4312A7E650000F5182B /* OnboardingView.swift */,
+				C871D3DE2B69631600F99922 /* OnboardingHeaderView.swift */,
 				C8608A472A7E7D3600F1A5F9 /* OnboardingPageView.swift */,
 			);
 			path = Views;
@@ -233,10 +264,12 @@
 		C8F7C4232A7E650000F5182B = {
 			isa = PBXGroup;
 			children = (
+				C871D3D02B63967300F99922 /* AppPreferences */,
 				C8F7C42E2A7E650000F5182B /* CloudVsFire */,
 				C8F7C43F2A7E650200F5182B /* CloudVsFireTests */,
 				C8F7C4492A7E650200F5182B /* CloudVsFireUITests */,
 				C8F7C42D2A7E650000F5182B /* Products */,
+				C871D3D12B63995E00F99922 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,6 +333,7 @@
 				C8F7C4282A7E650000F5182B /* Sources */,
 				C8F7C4292A7E650000F5182B /* Frameworks */,
 				C8F7C42A2A7E650000F5182B /* Resources */,
+				C871D3D52B63995E00F99922 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +342,7 @@
 			name = CloudVsFire;
 			packageProductDependencies = (
 				C871D3A72B5FF01B00F99922 /* SFSafeSymbols */,
+				C871D3D22B63995E00F99922 /* AppPreferences */,
 			);
 			productName = CloudVsFire;
 			productReference = C8F7C42C2A7E650000F5182B /* CloudVsFire.app */;
@@ -373,7 +408,7 @@
 				};
 			};
 			buildConfigurationList = C8F7C4272A7E650000F5182B /* Build configuration list for PBXProject "CloudVsFire" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -461,10 +496,12 @@
 				C8806B832A8D5F6400D8B29C /* OnboardingPageViewModel.swift in Sources */,
 				C8608A482A7E7D3600F1A5F9 /* OnboardingPageView.swift in Sources */,
 				C871D3AE2B60052800F99922 /* CloudKitNavigationStack.swift in Sources */,
+				C871D3DF2B69631600F99922 /* OnboardingHeaderView.swift in Sources */,
 				C8806B7F2A8D481800D8B29C /* Image+.swift in Sources */,
 				C8F7C4322A7E650000F5182B /* OnboardingView.swift in Sources */,
 				C8F7C4302A7E650000F5182B /* CloudVsFireApp.swift in Sources */,
 				C871D3AB2B60044F00F99922 /* HomeNavigationStack.swift in Sources */,
+				C871D3DA2B63FAFD00F99922 /* AppTabView.swift in Sources */,
 				C871D3B12B60059E00F99922 /* FirebaseNavigationStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,6 +857,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C871D3A62B5FF01B00F99922 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		C871D3D22B63995E00F99922 /* AppPreferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppPreferences;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

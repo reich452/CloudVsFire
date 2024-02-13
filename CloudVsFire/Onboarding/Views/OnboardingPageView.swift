@@ -12,9 +12,9 @@ struct OnboardingPageView: View {
     
     var body: some View {
         VStack {
-            TabView(selection: $viewModel.currentPage) {
-                ForEach(viewModel.allOnboardingPages.indices, id: \.self) { index in
-                    OnboardingView(onboarding: viewModel.allOnboardingPages[index])
+            TabView(selection: $viewModel.currentPageIndex) {
+                ForEach(viewModel.onboardingPages.indices, id: \.self) { index in
+                    OnboardingView(from: viewModel.currentOnboardingPage)
                         .tag(index)
                 }
             }
@@ -25,18 +25,15 @@ struct OnboardingPageView: View {
                     viewModel.nextPage()
                 }
             }
-            .disabled(viewModel.isLastPage)
             .padding()
         }
     }
     
-    init() {
-        self.init(viewModel: OnboardingPageViewModel())
-        setupAppearance()
-    }
-    
-    fileprivate init(viewModel: OnboardingPageViewModel) {
+    // MARK: - Init 
+  
+    init(viewModel: OnboardingPageViewModel) {
         self.viewModel = viewModel
+        setupAppearance()
     }
     
     private func setupAppearance() {
@@ -48,5 +45,5 @@ struct OnboardingPageView: View {
 // MARK: - Preview
 
 #Preview {
-    OnboardingPageView()
+    OnboardingPageView(viewModel: OnboardingPageViewModel())
 }
