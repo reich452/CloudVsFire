@@ -11,7 +11,7 @@ import Combine
 import SwiftUI
 
 /// A SwiftUI property wrapper that provides a SwiftUI dynamic property for accessing and modifying
-/// values stored in `BindePreferences`.
+/// values stored in `PreferenceStore`.
 ///
 /// This property wrapper allows SwiftUI views to bind to user preference values, automatically
 /// updating the view when these values change. The `Preference` wrapper should be used
@@ -27,19 +27,19 @@ public struct BindablePreference<Value>: DynamicProperty {
     /// An observer for changes in preferences, ensuring the SwiftUI view updates when preferences change./
     @ObservedObject private var preferencesObserver: PublisherObservableObject
     /// The key path to the specific value in `AppPreferences`.
-    private let keyPath: ReferenceWritableKeyPath<BindePreferences, Value>
+    private let keyPath: ReferenceWritableKeyPath<PreferenceStore, Value>
     /// The instance of `AppPreferences` used for accessing and modifying the preference value.
-    private let appPreferences: BindePreferences
+    private let appPreferences: PreferenceStore
 
     // MARK: init
 
     /// Initializes a new preference property wrapper.
     ///
     /// - Parameters:
-    ///   - keyPath: A key path to the specific preference value in `BindePreferences`.
-    ///   - preferences: An instance of `BindePreferences`. Defaults to `.standard` if not specified.
-    public init(_ keyPath: ReferenceWritableKeyPath<BindePreferences, Value>,
-                bindePreferences: BindePreferences = .standard) {
+    ///   - keyPath: A key path to the specific preference value in `PreferenceStore`.
+    ///   - preferences: An instance of `PreferenceStore`. Defaults to `.standard` if not specified.
+    public init(_ keyPath: ReferenceWritableKeyPath<PreferenceStore, Value>,
+                bindePreferences: PreferenceStore = .standard) {
         self.keyPath = keyPath
         self.appPreferences = bindePreferences
         let publisher = bindePreferences

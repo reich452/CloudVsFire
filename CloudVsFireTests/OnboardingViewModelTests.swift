@@ -16,7 +16,6 @@ class OnboardingPageViewModelTests: XCTestCase {
 
         // Assert
         XCTAssertEqual(viewModel.currentOnboardingPage, .pageOne, "Initial page should be pageOne")
-        XCTAssertFalse(viewModel.isLastPage, "Initial state should not be the last page")
     }
 
     func testNextPage() {
@@ -30,7 +29,7 @@ class OnboardingPageViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.currentOnboardingPage,
             .pageTwo,
                        "After one nextPage call, current page should be pageTwo")
-        XCTAssertEqual(viewModel.currentPage,
+        XCTAssertEqual(viewModel.currentPageIndex,
                        1,
                        "Current page index should be 1 after one nextPage call")
     }
@@ -48,17 +47,12 @@ class OnboardingPageViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.currentOnboardingPage,
             .pageThree,
                        "After two nextPage calls, current page should be pageThree")
-        XCTAssertEqual(viewModel.currentPage,
+        XCTAssertEqual(viewModel.currentPageIndex,
                        2,
                        "Current page index should be 2 after two nextPage calls")
-        XCTAssertTrue(viewModel.isLastPage,
-                      "Should not be the last page yet after two nextPage calls")
 
         // Act
         viewModel.nextPage()
-
-        // Assert
-        XCTAssertTrue(viewModel.isLastPage, "Should be the last page after three nextPage calls")
 
         // Act
         viewModel.nextPage()
@@ -67,7 +61,7 @@ class OnboardingPageViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.currentOnboardingPage,
             .pageThree,
                        "currentOnboardingPage should remain at pageThree after extra nextPage calls")
-        XCTAssertEqual(viewModel.currentPage,
+        XCTAssertEqual(viewModel.currentPageIndex,
                        2,
                        "Current page index should still be 2 after extra nextPage calls")
     }

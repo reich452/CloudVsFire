@@ -1,7 +1,7 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 //
-//  BindePreferences.swift
+//  PreferenceStore.swift
 //  CloudVsFire
 //
 //  Created by Nick Reichard on 1/25/24.
@@ -12,16 +12,16 @@ import Foundation
 
 /// Class for managing application preferences.
 ///
-/// `BindePreferences` provides a centralized point for managing user settings and preferences
+/// `PreferenceStore` provides a centralized point for managing user settings and preferences
 /// within the application. It uses a `UserDefaultsProvider` to persist these preferences,
 /// allowing for easy retrieval and modification. This class can be extended to include
 /// additional preference properties as needed.
-public class BindePreferences {
+public class PreferenceStore {
 
     // MARK: Properties
 
     /// The shared instance of `AppPreferences`.
-    public static let standard = BindePreferences()
+    public static let standard = PreferenceStore()
 
     /// The underlying provider used for storing and retrieving user defaults.
     private let userDefaultsProvider: UserDefaultsProvider
@@ -30,7 +30,7 @@ public class BindePreferences {
 
     // MARK: Init
 
-    /// Initializes a new instance of `BindePreferences`.
+    /// Initializes a new instance of `PreferenceStore`.
     ///
     /// - Parameter userDefaultsProvider: The provider used for storing and retrieving user defaults.
     ///
@@ -40,8 +40,8 @@ public class BindePreferences {
 
     // MARK: - App Stored Preferences
 
-    @UserDefault(PreferenceKey.hasOnboarded)
-    public var hasOnboarded: Bool = false
+    @UserDefault(PreferenceKey.hasCompletedOnboarding)
+    public var hasCompletedOnboarding: Bool = false
 
     // MARK: - Helper
 

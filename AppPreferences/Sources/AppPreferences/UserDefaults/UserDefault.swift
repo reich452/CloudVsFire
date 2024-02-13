@@ -7,14 +7,14 @@
 
 import Foundation
 
-/// A property wrapper for storing and retrieving values from `BindePreferences`.
+/// A property wrapper for storing and retrieving values from `PreferenceStore`.
 ///
 /// This property wrapper simplifies the interface for interacting with user preferences,
 /// allowing values to be stored and retrieved using property-like syntax. It is designed
-/// to be used within an `BindePreferences` instance and not as a standalone property.
+/// to be used within an `PreferenceStore` instance and not as a standalone property.
 ///
 /// - Warning: Direct access to `wrappedValue` is not supported and will result in a runtime error.
-///            Use subscript access through the `BindePreferences` instance instead.
+///            Use subscript access through the `PreferenceStore` instance instead.
 @propertyWrapper
 public struct UserDefault<Value> {
 
@@ -56,17 +56,17 @@ public struct UserDefault<Value> {
         self.init(wrappedValue: wrappedValue, storageKey.key)
     }
 
-    /// A static subscript for accessing or modifying the values in `BindePreferences`.
+    /// A static subscript for accessing or modifying the values in `PreferenceStore`.
     ///
     /// - Parameters:
-    ///   - instance: The instance of `BindePreferences`.
+    ///   - instance: The instance of `PreferenceStore`.
     ///   - wrappedKeyPath: The key path to the specific `UserDefault` instance.
-    ///   - storageKeyPath: The key path to the storage key in `BindePreferences`.
+    ///   - storageKeyPath: The key path to the storage key in `PreferenceStore`.
     /// - Returns: The value stored in the user defaults or the default value if no value is found.
     public static subscript(
-        _enclosingInstance instance: BindePreferences,
-        wrapped wrappedKeyPath: ReferenceWritableKeyPath<BindePreferences, Value>,
-        storage storageKeyPath: ReferenceWritableKeyPath<BindePreferences, Self>
+        _enclosingInstance instance: PreferenceStore,
+        wrapped wrappedKeyPath: ReferenceWritableKeyPath<PreferenceStore, Value>,
+        storage storageKeyPath: ReferenceWritableKeyPath<PreferenceStore, Self>
     ) -> Value {
         get {
             let key = instance[keyPath: storageKeyPath].storageKey

@@ -8,5 +8,5 @@
 import Foundation
 
 public enum PreferenceKey: String, StorageKey {
-    case hasOnboarded
+    case hasCompletedOnboarding
 }

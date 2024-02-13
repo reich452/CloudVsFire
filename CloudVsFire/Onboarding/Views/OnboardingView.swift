@@ -8,33 +8,38 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    
+
     var body: some View {
         VStack {
-            Image(uiImage: onboarding.imageAsset.image) // assumes ImageAsset is an enum with String raw values
-                .imageStyle(PrimaryImageStyle())
-                .padding(.bottom)
-            Text(onboarding.title)
+            OnboardingHeaderView(image: image)
+            Text(title)
                 .padding(.top)
                 .font(.system(.title2, weight: .semibold))
                 .foregroundColor(.black)
-                .multilineTextAlignment(.center)
-            Text(onboarding.subTitle)
+            Text(subTitle)
                 .font(.subheadline)
                 .padding(.bottom)
-                .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .padding([.horizontal, .top])
         }
+        .multilineTextAlignment(.center)
     }
     
-    var onboarding: Onboarding
+    let title: LocalizedStringResource
+    let subTitle: LocalizedStringResource
+    let image: UIImage
     
-    init(onboarding page: Onboarding) {
-        self.onboarding = page
+    init(title: LocalizedStringResource, subTitle: LocalizedStringResource, image: UIImage) {
+        self.title = title
+        self.subTitle = subTitle
+        self.image = image
+    }
+    
+    init(from onboarding: Onboarding) {
+        self.init(title: onboarding.title, subTitle: onboarding.subTitle, image: onboarding.imageAsset.image)
     }
 }
 
 #Preview {
-    OnboardingView(onboarding: .pageTwo)
+    OnboardingView(from: .pageTwo)
 }
