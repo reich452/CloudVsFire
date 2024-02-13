@@ -35,7 +35,8 @@ final class BindablePreferenceTests: XCTestCase {
 
     func testPreferenceWrapper() {
         // Arrange & Act
-        let bindeablePref = BindablePreference(\PreferenceStore.hasCompletedOnboarding, bindePreferences: mockAppPreferences)
+        let bindeablePref = BindablePreference(\PreferenceStore.hasCompletedOnboarding,
+                                                bindePreferences: mockAppPreferences)
 
         // Assert
         XCTAssertFalse(bindeablePref.wrappedValue, "Default value should be false")
@@ -48,7 +49,8 @@ final class BindablePreferenceTests: XCTestCase {
 
     func testPreferenceWrapperProjectedValue() {
         // Arrange
-        let bindeablePref = BindablePreference(\PreferenceStore.hasCompletedOnboarding, bindePreferences: mockAppPreferences)
+        let bindeablePref = BindablePreference(\PreferenceStore.hasCompletedOnboarding, 
+                                                bindePreferences: mockAppPreferences)
         let binding: Binding<Bool> = bindeablePref.projectedValue
 
         // Assert initial value

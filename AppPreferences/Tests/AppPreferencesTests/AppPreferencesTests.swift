@@ -33,7 +33,8 @@ final class PreferencesTests: XCTestCase {
 
     func testHhasCompletedOnboarding() {
         // Act & Assert
-        XCTAssertFalse(appPreferences.hasCompletedOnboarding, "Default value for hasCompletedOnboarding should be false")
+        XCTAssertFalse(appPreferences.hasCompletedOnboarding,
+                       "Default value for hasCompletedOnboarding should be false")
 
         // Act
         appPreferences.hasCompletedOnboarding = true
