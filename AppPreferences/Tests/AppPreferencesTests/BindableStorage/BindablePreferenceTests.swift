@@ -49,7 +49,7 @@ final class BindablePreferenceTests: XCTestCase {
 
     func testPreferenceWrapperProjectedValue() {
         // Arrange
-        let bindeablePref = BindablePreference(\PreferenceStore.hasCompletedOnboarding, 
+        let bindeablePref = BindablePreference(\PreferenceStore.hasCompletedOnboarding,
                                                 bindePreferences: mockAppPreferences)
         let binding: Binding<Bool> = bindeablePref.projectedValue
 

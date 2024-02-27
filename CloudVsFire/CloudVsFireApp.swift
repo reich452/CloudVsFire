@@ -11,10 +11,12 @@ import SwiftUI
 @main
 struct CloudVsFireApp: App {
     
-    // MARK: Properties
-    
+    // MARK: Dependancies
+    @UIApplicationDelegateAdaptor(AppDelegate.self) 
+    var delegate
     @BindablePreference(\.hasCompletedOnboarding)
     private var hasCompletedOnboarding
+    
     @State private var selection: RootTab? = .home
 
     // MARK: Scene
